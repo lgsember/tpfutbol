@@ -1,46 +1,39 @@
 # tpfutbol
 
-Versión 1.0 Programacion Orientada a Objetos
-
-Alumnos: Lucas Gonzalez, Rodrigo Castro
-
-Profesor: Gamaliel Natanael
-
-Comision: ACM2AP
-
+Versión 1.0 | Programacion Orientada a Objetos | Alumnos: Lucas Gonzalez, Rodrigo Castro | Profesor: Gamaliel Natanael | Comision: ACM2AP
 
 Tareas:
 
-Diagrama Creación de clases
+Diagrama Creación de clases - Listo - gonzalez
 
-Lista: Jugadores
+Lista: Jugadores - Listo - gonzalez
 
-Método: Agregar jugador
+Método: Agregar jugador - Listo - gonzalez
 
-Método: Eliminar jugador
+Método: Eliminar jugador - Listo - gonzalez
 
-Método: Buscar jugador
+Método: Buscar jugador - Listo - gonzalez
 
-Método: Cantidad total de jugadores
+Método: Cantidad total de jugadores - Listo - gonzalez
 
-Método: Ver lista de jugadores
+Método: Ver lista de jugadores - Listo - gonzalez
 
-Lista: Equipos
+Lista: Equipos - Listo - gonzalez
 
-Método: Agregar equipo
+Método: Agregar equipo - Listo, pero hay que controlar nombre - gonzalez
 
-Método: Eliminar equipo
+Método: Eliminar equipo - Nada todavia - gonzalez
 
-Método: Buscar equipo
+Método: Buscar equipo - Nada todavia - gonzalez
 
-Método: Cantidad total de equipos
+Método: Cantidad total de equipos - Nada todavia - gonzalez
 
-Método: Ver lista de equipos
+Método: Ver lista de equipos - Nada todavia - gonzalez
 
-Crear instancias de jugadores
+Crear instancias de jugadores - Del equipo 1 y 2, ok (Faltan mas equipos) - gonzalez
 
-Crear instancias de equipos
+Crear instancias de equipos - Listo, 4 equipos - gonzalez
 
-Crear instancia de gestor
+Crear instancia de gestor - Listo - gonzalez
 
-Método: Jugar partido
+Método: Jugar partido - Listo, pero controlar equipo ganador/perdedor, controlar para que no se repita el mismo partido - gonzalez, castro
