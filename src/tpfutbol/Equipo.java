@@ -1,4 +1,4 @@
-package tpmundial;
+package tpfutbol;
 
 import java.util.LinkedList;
 
@@ -46,7 +46,7 @@ public class Equipo {
 	}
 
 	public boolean AgregarJugador(String nombre, String posicion, int camiseta, int edad, boolean titularidad, boolean molestado, int titulo, int cantitular) {
-		
+		String []posiciones= {"Arquero" , "Delantero", "Defensor", "Mediocampista"};
 
 		if (this.getJugadores().element().isTitularidad()) {
 			cantitular=cantitular+1;
@@ -62,6 +62,14 @@ public class Equipo {
 			if (camiseta==this.getJugadores().get(i).getCamiseta()) {
 				while (camiseta==this.getJugadores().get(i).getCamiseta()) {
 					camiseta = Integer.parseInt(JOptionPane.showInputDialog("Numero de camiseta " + this.getJugadores().get(i).getCamiseta() + " no disponible. Elegir otro."));
+					i=0;
+				}
+			}
+		
+		for (int i = 0; i < this.getJugadores().size(); i++)
+			if (posicion.equals("Arquero")) {
+				while (posicion.equals("Arquero")) {
+					posicion = (String)JOptionPane.showInputDialog(null, "Este equipo ya tiene un arquero. Eligir otra posicion", "Eligir otra posicion de jugador", JOptionPane.DEFAULT_OPTION, null, posiciones, posiciones[0]);
 					i=0;
 				}
 			}
@@ -120,7 +128,8 @@ public class Equipo {
                 return jugador;
             }
         }
-        return null;
+		JOptionPane.showMessageDialog(null, "Ningun jugador encontrado con este numero de camiseta");
+		return null;
 	}
 	
 	public int CantidadJugadores() {
@@ -141,7 +150,7 @@ public class Equipo {
 			return "No hay jugadores en " + this.nom;
 		} else {
 			for (Jugador todosjugadores : jugadores) {
-				acum = acum + "\n ----------------------------- \nNombre: " + todosjugadores.getNombre() + "\nPosicion: " + todosjugadores.getPosicion() + "\nCamiseta: " + todosjugadores.getCamiseta() + "\nEdad: " + todosjugadores.getEdad();
+				acum = acum + "\n ----------------------------- \nNombre: " + todosjugadores.getNombre() + " | Edad: " + todosjugadores.getEdad()  + "\nCamiseta: " + todosjugadores.getCamiseta() + " | Posicion: " + todosjugadores.getPosicion();
 			}
 		}
 		return acum;
@@ -150,13 +159,27 @@ public class Equipo {
 	
 	public void CargarJugador() {
 		Jugador jugador1 = new Jugador("Juan", "Delantero", 10, 25, true, false);
-	    Jugador jugador2 = new Jugador("Jose", "Defensor", 5, 28, true, false);
+	    Jugador jugador2 = new Jugador("Jose", "Defensor", 5, 22, true, false);
 	    Jugador jugador3 = new Jugador("Bruno", "Mediocampista", 7, 23, true, false);
-	    Jugador jugador4 = new Jugador("Gabriel", "Centrocampista", 12, 21, true, false);
+	    Jugador jugador4 = new Jugador("Gabriel", "Mediocampista", 12, 21, true, false);
+	    Jugador jugador5 = new Jugador("Marcelo", "Delantero", 1, 21, true, false);
+	    Jugador jugador6 = new Jugador("Yuri", "Arquero", 9, 20, true, false);
+	    Jugador jugador7 = new Jugador("Lucas", "Defensor", 77, 28, true, false);
+	    Jugador jugador8 = new Jugador("Rodrigo", "Mediocampista", 64, 20, true, false);
+	    Jugador jugador9 = new Jugador("Natan", "Delantero", 13, 26, true, false);
+	    Jugador jugador10 = new Jugador("Daniel", "Mediocampista", 8, 19, true, false);
+	    //Jugador jugador11 = new Jugador("Diego", "Defensor", 25, 21, true, false);
 		this.getJugadores().add(jugador1);
 		this.getJugadores().add(jugador2);
 		this.getJugadores().add(jugador3);
 		this.getJugadores().add(jugador4);
+		this.getJugadores().add(jugador5);
+		this.getJugadores().add(jugador6);
+		this.getJugadores().add(jugador7);
+		this.getJugadores().add(jugador8);
+		this.getJugadores().add(jugador9);
+		this.getJugadores().add(jugador10);
+		//this.getJugadores().add(jugador11);
 	}
 	
 	public void CargarJugadorfalso() {
@@ -164,7 +187,7 @@ public class Equipo {
 		String []nombrefalso = {"Miguel", "Davi", "Gomez", "Renato", "Pedro", "Santi", "Gonzalo", "Perez", "Hector", "Alex", "Julio"};
 		
 		for (int i = 0; i < 11; i++) {
-			Jugador jugador = new Jugador(nombrefalso[i], "posicion", i, 20, true, false);
+			Jugador jugador = new Jugador(nombrefalso[i], "posicion", i+1, 20, true, false);
 			this.getJugadores().add(jugador);
 		}
 	}

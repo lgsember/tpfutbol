@@ -1,11 +1,11 @@
-package tpmundial;
+package tpfutbol;
 
 import java.util.LinkedList;
 
 import javax.swing.JOptionPane;
 
 public class Gerenciador {
-	
+
 	private LinkedList<Equipo> equipos = new LinkedList<Equipo>();
 
 	public Gerenciador() {
@@ -26,34 +26,34 @@ public class Gerenciador {
 	}
 
 	public void CargarEquipo() {
-		Equipo remo = new Equipo("Remo","Belém");
-		Equipo paysandu = new Equipo("Paysandu","Belém");
-		Equipo flamengo = new Equipo("Flamengo","Rio de Janeiro");
-		Equipo fluminense = new Equipo("Fluminense","Rio de Janeiro");
+		Equipo remo = new Equipo("Remo", "Belém");
+		Equipo paysandu = new Equipo("Paysandu", "Belém");
+		Equipo flamengo = new Equipo("Flamengo", "Rio de Janeiro");
+		Equipo fluminense = new Equipo("Fluminense", "Rio de Janeiro");
 		this.getEquipos().add(remo);
 		this.getEquipos().add(paysandu);
 		this.getEquipos().add(flamengo);
 		this.getEquipos().add(fluminense);
 	}
-	
+
 	public boolean AgregarEquipo(String nom, String ciudad) {
-		
-		if (this.getEquipos().size()>7) {
+
+		if (this.getEquipos().size() > 7) {
 			JOptionPane.showMessageDialog(null, "Límite de equipo alcanzado.");
 			return false;
 		} else {
 			this.getEquipos().add(new Equipo(nom, ciudad));
 			JOptionPane.showMessageDialog(null, "Equipo agregado.");
 			return true;
-			
 		}
+		// controlar para que no sea el mismo nombre
 	}
-	
+
 	/*
-Eliminar un equipo de la lista.
-Buscar un equipo por nombre.
-Obtener la cantidad total de equipos.
-Obtener la lista de equipos.
-*/
-	
+	 * Eliminar un equipo de la lista.
+	 * Buscar un equipo por nombre.
+	 * Obtener la cantidad total de equipos.
+	 * Obtener la lista de equipos.
+	 */
+
 }

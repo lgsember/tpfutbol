@@ -1,4 +1,4 @@
-package tpmundial;
+package tpfutbol;
 
 import javax.swing.JOptionPane;
 
@@ -34,8 +34,7 @@ public class Main {
 		opcion = JOptionPane.showOptionDialog(null, "Hola, bienvenido a tu mundial! Eligir una opcion para empezar.", "Tu Mundial", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
 		
 		switch (opcion) {
-		case 0: //agregar nuevo jugador
-			
+		case 0:
 			String nombrejugador = JOptionPane.showInputDialog("Ingresar nombre del nuevo jugador");
 			String posicion = (String)JOptionPane.showInputDialog(null, "Elegir posicion de este jugador", "Posicion del jugador", JOptionPane.DEFAULT_OPTION, null, posiciones, posiciones[0]);
 			int camiseta = Integer.parseInt(JOptionPane.showInputDialog("Ingresar numero de la camiseta de este jugador"));
@@ -53,8 +52,7 @@ public class Main {
 						}
 					}
 			break;
-		case 1: //Ver cantidad de jugadores
-			
+		case 1:
 			selequipo = (String)JOptionPane.showInputDialog(null,"Elegir equipo para ver cantidad de jugadores", "Cantidad de jugadores en Equipo", JOptionPane.DEFAULT_OPTION, null, equipos, equipos[0]);
 	
 			for (Equipo equipo : gestor.getEquipos()) {
@@ -63,8 +61,7 @@ public class Main {
 					}
 			}
 			break;
-		case 2: //Ver lista de jugadores
-			
+		case 2:
 			selequipo = (String)JOptionPane.showInputDialog(null, "Elegir equipo para ver sus jugadores", "Lista de jugadores en Equipo", JOptionPane.DEFAULT_OPTION, null, equipos, equipos[0]);
 			
 			for (Equipo equipo : gestor.getEquipos()) {
@@ -73,8 +70,7 @@ public class Main {
 					}
 			}
 			break;
-		case 3: //Eliminar 
-			
+		case 3:
 			selequipo = (String)JOptionPane.showInputDialog(null, "Elegir equipo para eliminar jugador", "Eliminar jugador de un Equipo", JOptionPane.DEFAULT_OPTION, null, equipos, equipos[0]);
 			
 			for (Equipo equipo : gestor.getEquipos()) {
@@ -83,8 +79,7 @@ public class Main {
 					}
 			}
 			break;
-		case 4: //Buscar jugador	
-			
+		case 4:
 			selequipo = (String)JOptionPane.showInputDialog(null, "Elegir equipo para buscar jugador", "Buscar jugador de un Equipo", JOptionPane.DEFAULT_OPTION, null, equipos, equipos[0]);
 			
 			for (Equipo equipo : gestor.getEquipos()) {
@@ -92,16 +87,19 @@ public class Main {
 					JOptionPane.showMessageDialog(null, equipo.BuscarJugador());
 					}
 			}
+			break;
 		case 5:
 			partido1.JugarPartido();
+			//controlar para que no se repita el mismo partido
 			break;
 		default:
 			break;
 		}
-		
 	
 		} while (opcion!=6);
 
 	}
 
 }
+
+

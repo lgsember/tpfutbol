@@ -1,14 +1,14 @@
-package tpmundial;
+package tpfutbol;
 
 public class Jugador {
-	
+
 	private String nombre;
 	private String posicion;
 	private int camiseta;
 	private int edad;
 	private boolean titularidad;
 	private boolean molestado;
-	
+
 	public Jugador(String nombre, String posicion, int camiseta, int edad, boolean titularidad, boolean molestado) {
 		super();
 		this.nombre = nombre;
@@ -69,11 +69,9 @@ public class Jugador {
 
 	@Override
 	public String toString() {
-		return "Jugador [nombre=" + nombre + ", posicion=" + posicion + ", camiseta=" + camiseta + ", edad=" + edad
-				+ ", titularidad=" + titularidad + ", molestado=" + molestado + "]";
-	}
-	
-		
+		return "Jugador de la camiseta " + camiseta + ":\nNombre: " + nombre + "\nEdad: " + edad + "\nPosicion: "
+				+ posicion + "\nEs titular: " + titularidad + "\nEstá lesionado: " + molestado;
 
+	}
 
 }
